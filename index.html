@@ -43,6 +43,7 @@
     <!-- Page -->
     <div class="page">
 
+      <!-- Page Loader -->
       <div id="page-loader">
         <div class="cssload-container">
           <div class="cssload-speeding-wheel"></div>
@@ -51,7 +52,8 @@
 
       <!-- Page header-->
       <header class="page-header">
-        <!-- RD Navbar-->
+
+        <!-- Navbar-->
         <div class="rd-navbar-wrap">
           <nav class="rd-navbar rd-navbar_corporate" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-static" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-static" data-stick-up-clone="false" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-md-stick-up-offset="145px" data-lg-stick-up-offset="145px" data-body-class="rd-navbar-corporate-linked">
             <!-- RD Navbar Panel-->
@@ -168,6 +170,46 @@
             </div>
           </nav>
         </div>
+
+        <!-- Banner Swpier -->
+        <section class="rd-parallax">
+          <div class="rd-parallax-layer" data-type="html" data-speed="1">
+            <div class="swiper-container swiper-slider swiper-slider_fullheight" data-simulate-touch="false" data-loop="true" data-autoplay="false">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide bg-gray-dark custom-parallax-wrap" data-slide-bg="/assets/images/banner-img-1.jpg">
+                  <div class="swiper-slide-caption custom-parallax text-center" data-speed="0.5" data-fade="true">
+                    <div class="shell">
+                      <h1 data-caption-animate="fadeInUpSmall"><span>Hello Speech Therapy</span></h1>
+                      <h3 data-caption-animate="fadeInUpSmall" data-caption-delay="200">Everyone has a voice to be heard.</h3>
+                      <div class="group-lg group-middle"><a class="button button-gray-base" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="contact-us.html" data-custom-scroll-to="section-see-features">Book an Appointment</a><a class="button button-gray-light-outline" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="#services">Learn More</a></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide bg-gray-dark custom-parallax-wrap" data-slide-bg="images/slider-slide-5-1920x1080.jpg">
+                  <div class="swiper-slide-caption custom-parallax text-center" data-speed="0.5" data-fade="true">
+                    <div class="shell">
+                      <h2 data-caption-animate="fadeInUpSmall">We strive to make quality speech therapy affordable and accessible to people in need.</h2>
+                      <a class="button button-gray-light-outline" data-caption-animate="fadeInUpSmall" data-caption-delay="200" href="mission-statement.html">Mission Statement</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Swiper Pagination-->
+              <div class="swiper-pagination"></div>
+
+              <!-- Swiper Navigation-->
+              <div class="swiper-button-prev linear-icon-chevron-left"></div>
+              <div class="swiper-button-next linear-icon-chevron-right"></div>
+
+            </div>
+
+          </div>
+
+        </section>
+
       </header>
 
       <!-- Page Footer-->
@@ -209,5 +251,7 @@
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+
   </body>
+
 </html>
