@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,IAAI;EACH,KAAK,ECCgB,OAAO",
-"sources": ["../sass/base/_base.sass","../sass/_variables.sass"],
+"mappings": "",
+"sources": [],
 "names": [],
 "file": "main.css"
 }
