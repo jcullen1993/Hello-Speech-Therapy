@@ -1,3 +1,6 @@
+.rd-navbar-top-panel__content-bottom {
+  padding: 1rem 0 !important; }
+
 .pricingCard {
   max-width: 350px;
   margin: 2rem auto !important;
@@ -6,8 +9,7 @@
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  min-height: 500px; }
+  -webkit-border-radius: 10px; }
   .pricingCard .pricingContent {
     padding: 1rem; }
   .pricingCard h3 {
@@ -26,5 +28,11 @@
     border-radius: 7px 7px 0 0;
     -moz-border-radius: 7px 7px 0 0;
     -webkit-border-radius: 7px 7px 0 0; }
+
+.callToAction1 {
+  background-color: #F7FAFC;
+  color: #000; }
+  .callToAction1 h3 {
+    color: #000; }
 
 /*# sourceMappingURL=main.css.map */

@@ -8175,7 +8175,7 @@ code,
 
 .cat-img-group > div {
   position: absolute;
-  bottom: 0;
+  margin
   max-width: 80%;
 }
 
@@ -22198,7 +22198,7 @@ html.boxed .rd-navbar--is-clone {
 
 .ui-to-top, .ui-to-top:active, .ui-to-top:focus {
   color: #fff;
-  background: #27bb9a;
+  background: #1A88D8;
 }
 
 .ui-to-top:hover {
