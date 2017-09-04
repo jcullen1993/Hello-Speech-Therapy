@@ -1,3 +1,6 @@
+.footer-minimal {
+  padding: 3rem; }
+
 .rd-navbar-top-panel__content-bottom {
   padding: 1rem 0 !important; }
 
@@ -28,6 +31,23 @@
     border-radius: 7px 7px 0 0;
     -moz-border-radius: 7px 7px 0 0;
     -webkit-border-radius: 7px 7px 0 0; }
+
+.therapistsImage {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  margin-bottom: 0.5rem; }
+
+.therapistsName {
+  text-align: center;
+  font-weight: bold;
+  line-height: 1rem; }
+
+.therapistsDivider {
+  padding: 3rem; }
+
+.therapistInfo {
+  text-align: left; }
 
 .callToAction1 {
   background-color: #F7FAFC;
