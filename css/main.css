@@ -41,4 +41,11 @@
 .profile-corporate__image {
   max-width: 300px; }
 
+.light-blue-background {
+  background-color: #F7FAFC; }
+
+.even-padding {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important; }
+
 /*# sourceMappingURL=main.css.map */
