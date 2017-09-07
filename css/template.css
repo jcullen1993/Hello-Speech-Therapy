@@ -13799,22 +13799,6 @@ h6 + .rating-list {
   background-position: center bottom;
 }
 
-.bg-image-2 {
-  background-image: url("../assets/images/bg-image-2.jpg");
-}
-
-.bg-image-3 {
-  background-image: url("../images/bg-image-3.jpg");
-}
-
-.bg-image-4 {
-  background-image: url("../images/bg-image-4.jpg");
-}
-
-.bg-image-6 {
-  background-image: url("../images/bg-image-6.jpg");
-}
-
 @media (min-width: 992px) {
   .desktop .bg-fixed {
     background-attachment: fixed;
@@ -17936,7 +17920,7 @@ html:not(.lt-ie10) .not-animated {
   height: 64px;
   top: 50%;
   left: 50%;
-  background-image: url("../images/isotope-loader.png");
+  background-image: url("../assets/images/isotope-loader.png");
   background-position: -1152px 0;
   animation: 0.7s sprite-animation steps(18) infinite;
   transition: .4s all ease;
@@ -22510,7 +22494,7 @@ html.boxed .rd-navbar--is-clone {
 .pswp__button,
 .pswp__button--arrow--left:before,
 .pswp__button--arrow--right:before {
-  background: url(../images/photoswipe-controls.png) 0 0 no-repeat;
+  background: url(../assets/images/photoswipe-controls.png) 0 0 no-repeat;
   background-size: 264px 88px;
   width: 44px;
   height: 44px;
@@ -22829,7 +22813,7 @@ a.pswp__share--download:hover {
 
 .pswp__preloader--active .pswp__preloader__icn {
   /* We use .gif in browsers that don't support CSS animation */
-  background: url(../images/preloader.gif) 0 0 no-repeat;
+  background: url(../assets/images/preloader.gif) 0 0 no-repeat;
 }
 
 .pswp--css_animation .pswp__preloader--active {
@@ -26058,7 +26042,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 }
 
 .slick-loading .slick-list {
-  background: #fff url("./../images/ajax-loader.gif") center center no-repeat;
+  background: #fff url("../assets/images/ajax-loader.gif") center center no-repeat;
 }
 
 /* Icons */
@@ -26938,7 +26922,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
   opacity: 0;
   visibility: hidden;
   transition: .3s all ease;
-  background: url(../images/preloader.gif) no-repeat rgba(255, 255, 255, 0.8) center center;
+  background: url(../assets/images/preloader.gif) no-repeat rgba(255, 255, 255, 0.8) center center;
   z-index: 6;
 }
 
@@ -27905,7 +27889,7 @@ yx-axis
 .mCSB_scrollTools .mCSB_buttonDown,
 .mCSB_scrollTools .mCSB_buttonLeft,
 .mCSB_scrollTools .mCSB_buttonRight {
-  background-image: url(mCSB_buttons.png);
+  background-image: url(../assets/mCSB_buttons.png);
   /* css sprites */
   background-repeat: no-repeat;
   opacity: 0.4;

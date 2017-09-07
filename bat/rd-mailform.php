@@ -1,6 +1,6 @@
 <?php
 
-$recipients = 'test@demolink.com';
+$recipients = 'info@hellospeechtherapy.ca';
 
 try {
     require './phpmailer/PHPMailerAutoload.php';
