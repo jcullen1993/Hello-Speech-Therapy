@@ -1562,15 +1562,11 @@ $document.ready(function () {
           output.text(msg[result]);
 
           if (result === "MF000") {
-            $(location).attr('href',"/thank-you.html");
-            return;
-            /*  
             if (output.hasClass("snackbars")) {
               output.html('<p><span class="icon text-middle linear-icon-check icon-xxs"></span><span>' + msg[result] + '</span></p>');
             } else {
               output.addClass("active success");
             }
-            */    
           } else {
             if (output.hasClass("snackbars")) {
               output.html(' <p class="snackbars-left"><span class="icon icon-xxs linear-icon-warning text-middle"></span><span>' + msg[result] + '</span></p>');
