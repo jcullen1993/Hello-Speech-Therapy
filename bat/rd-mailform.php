@@ -1,7 +1,7 @@
 <?php
 
 $recipients = 'info@hellospeechtherapy.ca';
-
+$_REQUEST
 try {
     require './phpmailer/PHPMailerAutoload.php';
 
@@ -17,8 +17,8 @@ try {
 
     $template = file_get_contents('rd-mailform.tpl');
 
-    if (isset($_POST['form-type'])) {
-        switch ($_POST['form-type']){
+    if (isset($_REQUEST['form-type'])) {
+        switch ($_REQUEST['form-type']){
             case 'contact':
                 $subject = 'A message from your site visitor';
                 break;
@@ -36,24 +36,24 @@ try {
         die('MF004');
     }
 
-    if (isset($_POST['email'])) {
+    if (isset($_REQUEST['email'])) {
         $template = str_replace(
             array("<!-- #{FromState} -->", "<!-- #{FromEmail} -->"),
-            array("Email:", $_POST['email']),
+            array("Email:", $_REQUEST['email']),
             $template);
     }else{
         die('MF003');
     }
 
-    if (isset($_POST['message'])) {
+    if (isset($_REQUEST['message'])) {
         $template = str_replace(
             array("<!-- #{MessageState} -->", "<!-- #{MessageDescription} -->"),
-            array("Message:", $_POST['message']),
+            array("Message:", $_REQUEST['message']),
             $template);
     }
 
     preg_match("/(<!-- #{BeginInfo} -->)(.|\n)+(<!-- #{EndInfo} -->)/", $template, $tmp, PREG_OFFSET_CAPTURE);
-    foreach ($_POST as $key => $value) {
+    foreach ($_REQUEST as $key => $value) {
         if ($key != "email" && $key != "message" && $key != "form-type" && $key != "g-recaptcha-response" && !empty($value)){
             $info = str_replace(
                 array("<!-- #{BeginInfo} -->", "<!-- #{InfoState} -->", "<!-- #{InfoDescription} -->"),
@@ -70,7 +70,7 @@ try {
         $template);
 
     $mail = new PHPMailer();
-    $mail->From = $_POST['email'];
+    $mail->From = $_REQUEST['email'];
 
     # Attach file
     if (isset($_FILES['file']) &&
@@ -79,8 +79,8 @@ try {
                              $_FILES['file']['name']);
     }
 
-    if (isset($_POST['name'])){
-        $mail->FromName = $_POST['name'];
+    if (isset($_REQUEST['name'])){
+        $mail->FromName = $_REQUEST['name'];
     }else{
         $mail->FromName = "Site Visitor";
     }
