@@ -606,7 +606,7 @@
                 </p>
 
                 <p>
-                  If you have a referral or report from other professionals (doctors, occupational or physical therapists, schools) this would be helpful in the initial appointment. We may ask you to sign a Release of Information so we can coordinate our services with any public services (educational or medical) involved in your care.
+                  If you have a referral or report from other professionals (doctors, occupational or physical therapists, schools) this would be helpful in the initial appointment. We may ask you to sign a Release of Information so we can coordinate our services with any public services (educational or medical) involved in your care. 
                 </p>
 
                 <p>
@@ -783,7 +783,8 @@
           <div class="cell-sm-7 cell-md-8">
             <h3>Book an Appointment</h3>
             <!-- RD Mailform-->
-            <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="get" action="bat/rd-mailform.php"  enctype="multipart/form-data" >
+            <div id="form-output-global"></div>
+            <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
               <div class="form-wrap form-wrap_icon linear-icon-man">
                 <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
                 <label class="form-label" for="contact-name">Name</label>
