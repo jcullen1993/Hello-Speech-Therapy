@@ -8720,12 +8720,12 @@ span.button {
 * Form styles
 * --------------------------------------------------
 */
-.rd-mailform {
+.rd-mailform_style-1 {
   position: relative;
   text-align: left;
 }
 
-.rd-mailform * + .button {
+.rd-mailform_style-1 * + .button {
   margin-top: 25px;
 }
 
@@ -14436,7 +14436,7 @@ h3 + h6 {
   margin-top: 38px;
 }
 
-* + .rd-mailform {
+* + .rd-mailform_style-1 {
   margin-top: 38px;
 }
 
