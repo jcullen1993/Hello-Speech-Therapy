@@ -4,6 +4,10 @@
 .rd-navbar-top-panel__content-bottom {
   padding: 1rem 0 !important; }
 
+.milestoneTable {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
 .pricingCard {
   max-width: 350px;
   margin: 2rem auto !important;
