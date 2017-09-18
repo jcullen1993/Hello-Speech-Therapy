@@ -1,1 +1,141 @@
-var dp={SyntaxHighlighter:{}};dp.SyntaxHighlighter={parseParams:function(m,d,c,h,l,a){function e(t,q){var s=new XRegExp("^"+q+"\\[(?<value>\\w+)\\]$","gi"),p=null;for(var r=0;r<t.length;r++){if((p=s.exec(t[r]))!=null){return p.value}}return null}function k(p,i){return p!=null?p:i}function j(i){return i!=null?i.toString():null}var b=m.split(":"),n=b[0],o={},g={"true":true};reverse={"true":false},result=null,defaults=SyntaxHighlighter.defaults;for(var f in b){o[b[f]]="true"}d=j(k(d,defaults.gutter));c=j(k(c,defaults.toolbar));h=j(k(h,defaults.collapse));a=j(k(a,defaults.ruler));l=j(k(l,defaults["first-line"]));return{brush:n,gutter:k(reverse[o.nogutter],d),toolbar:k(reverse[o.nocontrols],c),collapse:k(g[o.collapse],h),"first-line":k(e(b,"firstline"),l)}},HighlightAll:function(b,h,g,n,q,c){function e(){var r=arguments;for(var s=0;s<r.length;s++){if(r[s]===null){continue}if(typeof(r[s])=="string"&&r[s]!=""){return r[s]+""}if(typeof(r[s])=="object"&&r[s].value!=""){return r[s].value+""}}return null}function p(v,s,u){var r=document.getElementsByTagName(u);for(var t=0;t<r.length;t++){if(r[t].getAttribute("name")==s){v.push(r[t])}}}var a=[],o=null,d={},m="innerHTML";p(a,b,"pre");p(a,b,"textarea");if(a.length===0){return}for(var l=0;l<a.length;l++){var k=a[l],f=e(k.attributes["class"],k.className,k.attributes.language,k.language),j="";if(f===null){continue}f=dp.SyntaxHighlighter.parseParams(f,h,g,n,q,c);SyntaxHighlighter.highlight(f,k)}}};
+var dp = {
+	SyntaxHighlighter : {}
+};
+
+dp.SyntaxHighlighter = {
+	parseParams: function(
+						input,
+						showGutter, 
+						showControls, 
+						collapseAll, 
+						firstLine, 
+						showColumns
+						)
+	{
+		function getValue(list, name)
+		{
+			var regex = new XRegExp('^' + name + '\\[(?<value>\\w+)\\]$', 'gi'),
+				match = null
+				;
+			
+			for (var i = 0; i < list.length; i++) 
+				if ((match = regex.exec(list[i])) != null)
+					return match.value;
+			
+			return null;
+		};
+		
+		function defaultValue(value, def)
+		{
+			return value != null ? value : def;
+		};
+		
+		function asString(value)
+		{
+			return value != null ? value.toString() : null;
+		};
+
+		var parts = input.split(':'),
+			brushName = parts[0],
+			options = {},
+			straight = { 'true' : true }
+			reverse = { 'true' : false },
+			result = null,
+			defaults = SyntaxHighlighter.defaults
+			;
+		
+		for (var i in parts)
+			options[parts[i]] = 'true';
+
+		showGutter = asString(defaultValue(showGutter, defaults.gutter));
+		showControls = asString(defaultValue(showControls, defaults.toolbar));
+		collapseAll = asString(defaultValue(collapseAll, defaults.collapse)); 
+		showColumns = asString(defaultValue(showColumns, defaults.ruler));
+		firstLine = asString(defaultValue(firstLine, defaults['first-line'])); 
+
+		return {
+			brush			: brushName,
+			gutter			: defaultValue(reverse[options.nogutter], showGutter),
+			toolbar			: defaultValue(reverse[options.nocontrols], showControls),
+			collapse		: defaultValue(straight[options.collapse], collapseAll),
+			// ruler			: defaultValue(straight[options.showcolumns], showColumns),
+			'first-line'	: defaultValue(getValue(parts, 'firstline'), firstLine)
+		};
+	},
+	
+	HighlightAll: function(
+						name, 
+						showGutter /* optional */, 
+						showControls /* optional */, 
+						collapseAll /* optional */, 
+						firstLine /* optional */, 
+						showColumns /* optional */
+						)
+	{
+		function findValue()
+		{
+			var a = arguments;
+			
+			for (var i = 0; i < a.length; i++) 
+			{
+				if (a[i] === null) 
+					continue;
+				
+				if (typeof(a[i]) == 'string' && a[i] != '') 
+					return a[i] + '';
+				
+				if (typeof(a[i]) == 'object' && a[i].value != '') 
+					return a[i].value + '';
+			}
+			
+			return null;
+		};
+
+		function findTagsByName(list, name, tagName)
+		{
+			var tags = document.getElementsByTagName(tagName);
+			
+			for (var i = 0; i < tags.length; i++) 
+				if (tags[i].getAttribute('name') == name) 
+					list.push(tags[i]);
+		}
+		
+		var elements = [],
+			highlighter = null,
+			registered = {},
+			propertyName = 'innerHTML'
+			;
+		
+		// for some reason IE doesn't find <pre/> by name, however it does see them just fine by tag name... 
+		findTagsByName(elements, name, 'pre');
+		findTagsByName(elements, name, 'textarea');
+
+		if (elements.length === 0)
+			return;
+		
+		for (var i = 0; i < elements.length; i++)
+		{
+			var element = elements[i],
+				params = findValue(
+					element.attributes['class'], element.className, 
+					element.attributes['language'], element.language
+					),
+				language = ''
+				;
+			
+			if (params === null) 
+				continue;
+
+			params = dp.SyntaxHighlighter.parseParams(
+				params,
+				showGutter, 
+				showControls, 
+				collapseAll, 
+				firstLine, 
+				showColumns
+				);
+
+			SyntaxHighlighter.highlight(params, element);
+		}
+	}
+};
