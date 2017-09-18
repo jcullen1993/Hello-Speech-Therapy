@@ -26572,7 +26572,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 
 .select2-container--bootstrap .select2-results__option--highlighted[aria-selected] {
   background-color: #1A88D8;
-  color: #333;
+  color: #ffffff;
 }
 
 .select2-container--bootstrap .select2-results__option .select2-results__option {

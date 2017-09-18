@@ -45,6 +45,10 @@
 .therapistImage {
   max-width: 250px; }
 
+.paypalForm table {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+
 .light-blue-background {
   background-color: #F7FAFC; }
 
