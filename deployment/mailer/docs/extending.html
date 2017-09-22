@@ -1,4 +1,19 @@
-<html> <head> <title>Examples using phpmailer</title> </head> <body> <h2>Examples using PHPMailer</h2> <h3>1. Advanced Example</h3> <p> This demonstrates sending multiple email messages with binary attachments from a MySQL database using multipart/alternative messages.<p> <pre>
+<html>
+<head>
+<title>Examples using phpmailer</title>
+</head>
+
+<body>
+
+<h2>Examples using PHPMailer</h2>
+
+<h3>1. Advanced Example</h3>
+<p>
+
+This demonstrates sending multiple email messages with binary attachments
+from a MySQL database using multipart/alternative messages.<p>
+
+<pre>
 require 'PHPMailerAutoload.php';
 
 $mail = new PHPMailer();
@@ -38,7 +53,24 @@ while ($row = mysqli_fetch_assoc($result))
     $mail->clearAddresses();
     $mail->clearAttachments();
 }
-</pre> <p> <h3>2. Extending PHPMailer</h3> <p> Extending classes with inheritance is one of the most powerful features of object-oriented programming. It allows you to make changes to the original class for your own personal use without hacking the original classes, and it's very easy to do: <p> Here's a class that extends the phpmailer class and sets the defaults for the particular site:<br> PHP include file: my_phpmailer.php <p> <pre>
+</pre>
+<p>
+
+<h3>2. Extending PHPMailer</h3>
+<p>
+
+Extending classes with inheritance is one of the most
+powerful features of object-oriented programming. It allows you to make changes to the
+original class for your own personal use without hacking the original
+classes, and it's very easy to do:
+
+<p>
+Here's a class that extends the phpmailer class and sets the defaults
+for the particular site:<br>
+PHP include file: my_phpmailer.php
+<p>
+
+<pre>
 require 'PHPMailerAutoload.php';
 
 class my_phpmailer extends PHPMailer {
@@ -68,7 +100,11 @@ class my_phpmailer extends PHPMailer {
         // Place your new code here
     }
 }
-</pre> <br> Now here's a normal PHP page in the site, which will have all the defaults set above:<br> <pre>
+</pre>
+<br>
+Now here's a normal PHP page in the site, which will have all the defaults set above:<br>
+
+<pre>
 require 'my_phpmailer.php';
 
 // Instantiate your new class
@@ -87,4 +123,6 @@ if(!$mail->send())
 }
 
 echo 'Message was sent successfully';
-</pre> </body> </html>
+</pre>
+</body>
+</html>

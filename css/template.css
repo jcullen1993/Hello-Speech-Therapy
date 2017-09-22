@@ -24975,7 +24975,7 @@ a.pswp__share--download:hover {
 
 @media (max-width: 767px) {
   .dtp > .dtp-content {
-    max-height: 90vh;
+    max-height: 100vh;
     overflow-y: auto;
   }
 }
