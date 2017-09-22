@@ -1,1 +1,0 @@
-# hello-speech-therapy
