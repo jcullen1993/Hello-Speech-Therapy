@@ -724,7 +724,7 @@ $document.ready(function () {
       $capthcaItem.after("<span class='form-validation'></span>");
     }
   };
-  
+
   /**
    * Init Bootstrap tooltip
    * @description  calls a function when need to init bootstrap tooltips
@@ -963,17 +963,6 @@ $document.ready(function () {
         statefulButtonLoading.button('reset')
       }, 2000);
     })
-  }
-
-  /**
-   * UI To Top
-   * @description Enables ToTop Button
-   */
-  if (isDesktop && !isNoviBuilder) {
-    $().UItoTop({
-      easingType: 'easeOutQuart',
-      containerClass: 'ui-to-top'
-    });
   }
 
   /**
@@ -1836,7 +1825,7 @@ $document.ready(function () {
         });
       }
     }
-    
+
     if (!isIE && !isMobile && !isNoviBuilder) {
       $(window).on("scroll", function () {
         for (i = 0; i < plugins.rdParallax.length; i++) {
@@ -1898,7 +1887,7 @@ $document.ready(function () {
       var flickrfeedItem = $(plugins.flickrfeed[i]);
       flickrfeedItem.RDFlickr({
         callback: function () {
-          var items = flickrfeedItem.find("[data-photo-swipe-item]"); 
+          var items = flickrfeedItem.find("[data-photo-swipe-item]");
 
           if (items.length && !isNoviBuilder) {
             for (var j = 0; j < items.length; j++) {
@@ -1912,12 +1901,12 @@ $document.ready(function () {
           }
         }
       });
-      
+
       setTimeout(function() {
-        var items = flickrfeedItem.find("[data-photo-swipe-item]"); 
-        if (items.length && isNoviBuilder) { 
-          for (var j = 0; j < items.length; j++) { 
-            items[j].setAttribute('href', '#'); 
+        var items = flickrfeedItem.find("[data-photo-swipe-item]");
+        if (items.length && isNoviBuilder) {
+          for (var j = 0; j < items.length; j++) {
+            items[j].setAttribute('href', '#');
             items[j].addEventListener('click', function(e) {
               e.preventDefault();
               return false;
@@ -2282,7 +2271,7 @@ $document.ready(function () {
     }(document, "script", "twitter-timeline"));
 
   }
-  
+
   /**
    * RD Range
    * @description Enables RD Range plugin
@@ -2353,4 +2342,3 @@ $document.ready(function () {
     }
   }
 });
-
